@@ -1,0 +1,28 @@
+public class Solution {
+
+    // Complete the hourglassSum function below.
+    static int hourglassSum(int[][] a) {
+        int rowSize = a.length;
+        int colSize = a[0].length;
+        int rowIndex,colIndex;
+        int sum = 0;
+        int maxSum=-9999;
+        for(rowIndex=0;rowIndex<rowSize-2;rowIndex++)
+        {
+            for(colIndex=0;colIndex<colSize-2;colIndex++)
+            {
+                sum=a[rowIndex][colIndex]+a[rowIndex][colIndex+1]+a[rowIndex][colIndex+2]+a[rowIndex+1][colIndex+1]+a[rowIndex+2][colIndex]+a[rowIndex+2][colIndex+1]+a  [rowIndex+2][colIndex+2];
+            
+                if(sum>maxSum)
+                {
+                    maxSum=sum;
+                }
+                else
+                {
+                    maxSum=maxSum;
+                }
+            
+            }
+        }
+       return maxSum;
+    }
